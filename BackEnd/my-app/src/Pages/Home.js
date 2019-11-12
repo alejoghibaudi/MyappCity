@@ -11,7 +11,6 @@ function Home() {
     <Navbar/>
     <Header/>
     <Botonconflecha/>
-    <p className="col-md-12">Want to build your own Mytinerary?</p>
     <FooterHome/>
     <BotonHome/>
     </div>

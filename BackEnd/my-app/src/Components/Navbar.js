@@ -14,8 +14,8 @@ const Navbar = () => {
         <Dropdown.Item><Link to="/Login" className="link">Login</Link></Dropdown.Item>
         <Dropdown.Item ><Link to="/Create" className="link">Create</Link></Dropdown.Item>
         </DropdownButton>
-        <DropdownButton id="dropdown-basic-button"className="Boton2" title=" ">
-        <Dropdown.Item><Link to="/Option1" className="link">Option1</Link></Dropdown.Item>
+        <DropdownButton id="dropdown-basic-button" className="Boton2" title=" ">
+        <Dropdown.Item><Link to="/Paises" className="link">Paises</Link></Dropdown.Item>
         <Dropdown.Item><Link to="/Option2" className="link">Option2</Link></Dropdown.Item>
         </DropdownButton>
         </ButtonToolbar>

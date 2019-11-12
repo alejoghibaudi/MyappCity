@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 
 function Buttonconflecha (){
     return(
-        <div>
+        <div className="App-flecha">
             <h3>Start browsing</h3>
-            <center><Link to="/Login" className="link"><button className="Botonconnflecha">Hola</button></Link></center>
+            <center><Link to="/Login" className="link"><button className="Botonconnflecha"></button></Link></center>
         </div>
     )
 }
