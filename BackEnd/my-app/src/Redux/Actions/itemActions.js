@@ -5,7 +5,7 @@ export const getItems = () => dispatch => {
 	axios.get('http://localhost:4000/api/city').then(res =>
 		dispatch({
 			type: GET_ITEMS,
-			payload: res.data
+			payload: res.data.Respuesta
 		})
 	);
 };
