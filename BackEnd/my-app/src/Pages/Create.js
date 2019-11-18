@@ -10,7 +10,7 @@ class Login extends Component {
 
 	render() {
 		return <h1>HOla</h1>;
-	}
+	} 
 }
 Login.propTypes = {
 	getItems: PropTypes.func.isRequired,

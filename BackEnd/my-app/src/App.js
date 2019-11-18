@@ -2,9 +2,6 @@ import React from 'react';
 import './App.css';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-import { Provider } from 'react-redux';
-import store from './Redux/Store';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Create from './Pages/Create';

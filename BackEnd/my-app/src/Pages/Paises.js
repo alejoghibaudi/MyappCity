@@ -13,25 +13,48 @@ class Cities extends Component {
 		this.props.getItems();
 	}
 
+	constructor() {
+		super();
+		this.state = {
+			search:''
+		};
+	}
+
+	updateSearch(event){
+		this.setState({search:event.target.value})
+	}
+
 	render() {
-		const { cities } = this.props.cities;
+		const  {cities}  = this.props.cities;
+		let filteredCity =cities.filter(
+			(city)=>{
+				return city.ciudad.toLowerCase().indexOf(this.state.search) == 0;
+			}	
+		);
 		console.log(cities);
 		return (
-			<ul>
-				{cities.map(ciudad => {
-					return (
-						<li key={ciudad._id}>
-							{ciudad.ciudad} - {ciudad.pais}
-						</li>
-					);
-				})}
-			</ul>
-		);
-	}
-}
-
+			<div>
+					<input type="text"
+						value={this.state.search}
+						onChange={this.updateSearch.bind(this)}>
+					</input>
+			
+				<ul>
+					{filteredCity.map(ciudad => {
+						return (
+							<li key={ciudad._id}>
+								{ciudad.ciudad} - {ciudad.pais}
+							</li>
+						);
+					})}
+				</ul>
+				</div>
+				);
+			}
+		}
+		
 const mapSateToProps = state => ({
-	cities: state.item
-});
-
-export default connect(mapSateToProps, { getItems })(Cities);
+					cities: state.item
+			});
+			
+export default connect(mapSateToProps, {getItems})(Cities);
